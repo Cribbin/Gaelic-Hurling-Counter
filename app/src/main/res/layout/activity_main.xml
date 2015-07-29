@@ -31,6 +31,7 @@
                 android:textAllCaps="true"/>
 
             <TextView
+                android:id="@+id/team_1_goals"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -44,7 +45,8 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="+" />
+                android:text="+"
+                android:id="@+id/team_1_goals_button"/>
 
         </LinearLayout>
 
@@ -72,6 +74,7 @@
                 android:textSize="16sp" />
 
             <TextView
+                android:id="@+id/team_1_score"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="0"
@@ -96,6 +99,7 @@
                 android:textAllCaps="true"/>
 
             <TextView
+                android:id="@+id/team_1_points"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -106,6 +110,7 @@
                 android:textStyle="bold" />
 
             <Button
+                android:id="@+id/team_1_points_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="+" />
@@ -136,6 +141,7 @@
                 android:textAllCaps="true"/>
 
             <TextView
+                android:id="@+id/team_2_goals"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -147,6 +153,7 @@
                 android:textStyle="bold" />
 
             <Button
+                android:id="@+id/team_2_goals_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="+" />
@@ -177,6 +184,7 @@
                 android:textSize="16sp" />
 
             <TextView
+                android:id="@+id/team_2_score"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="0"
@@ -201,6 +209,7 @@
                 android:textAllCaps="true"/>
 
             <TextView
+                android:id="@+id/team_2_points"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -211,6 +220,7 @@
                 android:textStyle="bold" />
 
             <Button
+                android:id="@+id/team_2_points_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="+" />
