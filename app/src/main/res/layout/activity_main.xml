@@ -28,7 +28,8 @@
                 android:textColor="#000"
                 android:textIsSelectable="false"
                 android:textSize="75sp"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:textStyle="bold"/>
 
             <Button
                 android:layout_width="wrap_content"
@@ -41,25 +42,32 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:gravity="center">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Team 1"
-                android:textColor="#000"/>
+                android:textColor="#000"
+                android:layout_marginBottom="8dp"
+                android:textSize="25sp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Foirne 1"
-                android:textColor="#000"/>
+                android:textColor="#555"
+                android:layout_marginBottom="8dp"
+                android:textSize="16sp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="0"
-                android:textColor="#000"/>
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:textSize="40sp"/>
 
         </LinearLayout>
 
@@ -75,7 +83,8 @@
                 android:text="0"
                 android:textColor="#000"
                 android:textSize="75sp"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:textStyle="bold"/>
 
             <Button
                 android:layout_width="wrap_content"
