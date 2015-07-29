@@ -24,7 +24,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="0"/>
+                android:text="0"
+                android:textColor="#000"/>
 
             <Button
                 android:layout_width="wrap_content"
@@ -42,17 +43,20 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Team 1" />
+                android:text="Team 1"
+                android:textColor="#000"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Foirne 1"/>
+                android:text="Foirne 1"
+                android:textColor="#000"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0"/>
+                android:text="0"
+                android:textColor="#000"/>
 
         </LinearLayout>
 
@@ -65,7 +69,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="0"/>
+                android:text="0"
+                android:textColor="#000"/>
 
             <Button
                 android:layout_width="wrap_content"
