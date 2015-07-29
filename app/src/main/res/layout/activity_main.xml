@@ -23,6 +23,15 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="Goals"
+                android:textColor="#555"
+                android:gravity="center_horizontal"
+                android:textSize="15sp"
+                android:textAllCaps="true"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="0"
@@ -79,6 +88,15 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="Points"
+                android:textColor="#555"
+                android:gravity="center_horizontal"
+                android:textSize="15sp"
+                android:textAllCaps="true"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="0"
@@ -106,6 +124,15 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Goals"
+                android:textColor="#555"
+                android:gravity="center_horizontal"
+                android:textSize="15sp"
+                android:textAllCaps="true"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -162,6 +189,15 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Points"
+                android:textColor="#555"
+                android:gravity="center_horizontal"
+                android:textSize="15sp"
+                android:textAllCaps="true"/>
 
             <TextView
                 android:layout_width="match_parent"
