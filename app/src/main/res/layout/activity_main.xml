@@ -7,14 +7,14 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".MainActivity"
-    android:baselineAligned="false">
+    tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginBottom="16dp"
         android:layout_weight="1"
+        android:baselineAligned="false"
         android:orientation="horizontal">
 
         <LinearLayout
@@ -34,7 +34,7 @@
             <TextView
                 android:id="@+id/team_1_goals"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="0"
@@ -47,8 +47,8 @@
                 android:id="@+id/team_1_goals_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="+"
-                android:onClick="incrementTeam1Goals"/>
+                android:onClick="incrementTeam1Goals"
+                android:text="+" />
 
         </LinearLayout>
 
@@ -83,7 +83,6 @@
                 android:textColor="#000"
                 android:textSize="40sp"
                 android:textStyle="bold" />
-
         </LinearLayout>
 
         <LinearLayout
@@ -103,7 +102,7 @@
             <TextView
                 android:id="@+id/team_1_points"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="0"
@@ -115,8 +114,8 @@
                 android:id="@+id/team_1_points_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="+"
-                android:onClick="incrementTeam1Points"/>
+                android:onClick="incrementTeam1Points"
+                android:text="+" />
 
         </LinearLayout>
 
@@ -126,6 +125,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
+        android:baselineAligned="false"
         android:orientation="horizontal">
 
         <LinearLayout
@@ -145,7 +145,7 @@
             <TextView
                 android:id="@+id/team_2_goals"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="0"
@@ -158,8 +158,8 @@
                 android:id="@+id/team_2_goals_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="+"
-                android:onClick="incrementTeam2Goals"/>
+                android:onClick="incrementTeam2Goals"
+                android:text="+" />
 
         </LinearLayout>
 
@@ -194,7 +194,6 @@
                 android:textColor="#000"
                 android:textSize="40sp"
                 android:textStyle="bold" />
-
         </LinearLayout>
 
         <LinearLayout
@@ -214,7 +213,7 @@
             <TextView
                 android:id="@+id/team_2_points"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="0"
@@ -226,9 +225,8 @@
                 android:id="@+id/team_2_points_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="+"
-                android:onClick="incrementTeam2Points"/>
-
+                android:onClick="incrementTeam2Points"
+                android:text="+" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
