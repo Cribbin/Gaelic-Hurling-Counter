@@ -6,6 +6,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -41,27 +42,47 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void incrementTeam1Goals(View v){
-        team1Goals++;
-        team1Score += 3;
-        updateTeam1();
+        if(team1Goals < 99) {
+            team1Goals++;
+            team1Score += 3;
+            updateTeam1();
+        }
+
+        else
+            showMaxErrorToast("Goals");
     }
 
     public void incrementTeam1Points(View v){
-        team1Points++;
-        team1Score++;
-        updateTeam1();
+        if(team1Points < 99) {
+            team1Points++;
+            team1Score++;
+            updateTeam1();
+        }
+
+        else
+            showMaxErrorToast("Points");
     }
 
     public void incrementTeam2Goals(View v){
-        team2Goals++;
-        team2Score += 3;
-        updateTeam2();
+        if(team2Goals < 99) {
+            team2Goals++;
+            team2Score += 3;
+            updateTeam2();
+        }
+
+        else
+            showMaxErrorToast("Goals");
     }
 
     public void incrementTeam2Points(View v){
-        team2Points++;
-        team2Score++;
-        updateTeam2();
+        if(team2Points < 99) {
+            team2Points++;
+            team2Score++;
+            updateTeam2();
+        }
+
+        else
+            showMaxErrorToast("Points");
     }
 
     public void updateTeam1(){
@@ -82,5 +103,10 @@ public class MainActivity extends AppCompatActivity {
         team2GoalsTextView.setText(String.valueOf(team2Goals));
         team2PointsTextView.setText(String.valueOf(team2Points));
         team2ScoreTextView.setText(String.valueOf(team2Score));
+    }
+
+    public void showMaxErrorToast(String goalsOrPoints) {
+        Toast maxToast = Toast.makeText(this, goalsOrPoints + " cannot exceed 99", Toast.LENGTH_SHORT);
+        maxToast.show();
     }
 }
