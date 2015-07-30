@@ -23,32 +23,17 @@
             android:orientation="vertical">
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:text="@string/goals_header"
-                android:textAllCaps="true"
-                android:textColor="#555"
-                android:textSize="15sp" />
+                style="@style/goalsAndPointsHeaderStyle"
+                android:text="@string/goals_header" />
 
             <TextView
                 android:id="@+id/team_1_goals"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="@string/score_default_value"
-                android:textColor="#000"
-                android:textIsSelectable="false"
-                android:textSize="75sp"
-                android:textStyle="bold" />
+                style="@style/goalsAndPointsStyle" />
 
             <Button
                 android:id="@+id/team_1_goals_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="incrementTeam1Goals"
-                android:text="@string/increment_button" />
+                style="@style/buttonStyle"
+                android:onClick="incrementTeam1Goals" />
 
         </LinearLayout>
 
@@ -60,29 +45,16 @@
             android:orientation="vertical">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:text="@string/team_1_default_name"
-                android:textColor="#000"
-                android:textSize="25sp" />
+                style="@style/teamNameStyle"
+                android:text="@string/team_1_default_name" />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:text="@string/team_1_default_name_irish"
-                android:textColor="#555"
-                android:textSize="16sp" />
+                style="@style/teamNameIrishStyle"
+                android:text="@string/team_1_default_name_irish" />
 
             <TextView
                 android:id="@+id/team_1_score"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/score_default_value"
-                android:textColor="#000"
-                android:textSize="40sp"
-                android:textStyle="bold" />
+                style="@style/overallScoreStyle" />
         </LinearLayout>
 
         <LinearLayout
@@ -91,31 +63,17 @@
             android:orientation="vertical">
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:text="@string/points_header"
-                android:textAllCaps="true"
-                android:textColor="#555"
-                android:textSize="15sp" />
+                style="@style/goalsAndPointsHeaderStyle"
+                android:text="@string/points_header" />
 
             <TextView
                 android:id="@+id/team_1_points"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="@string/score_default_value"
-                android:textColor="#000"
-                android:textSize="75sp"
-                android:textStyle="bold" />
+                style="@style/goalsAndPointsStyle" />
 
             <Button
                 android:id="@+id/team_1_points_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="incrementTeam1Points"
-                android:text="@string/increment_button" />
+                style="@style/buttonStyle"
+                android:onClick="incrementTeam1Points" />
 
         </LinearLayout>
 
@@ -134,32 +92,17 @@
             android:orientation="vertical">
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:text="@string/goals_header"
-                android:textAllCaps="true"
-                android:textColor="#555"
-                android:textSize="15sp" />
+                style="@style/goalsAndPointsHeaderStyle"
+                android:text="@string/goals_header" />
 
             <TextView
                 android:id="@+id/team_2_goals"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="@string/score_default_value"
-                android:textColor="#000"
-                android:textIsSelectable="false"
-                android:textSize="75sp"
-                android:textStyle="bold" />
+                style="@style/goalsAndPointsStyle" />
 
             <Button
                 android:id="@+id/team_2_goals_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="incrementTeam2Goals"
-                android:text="@string/increment_button" />
+                style="@style/buttonStyle"
+                android:onClick="incrementTeam2Goals" />
 
         </LinearLayout>
 
@@ -171,29 +114,16 @@
             android:orientation="vertical">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:text="@string/team_2_default_name"
-                android:textColor="#000"
-                android:textSize="25sp" />
+                style="@style/teamNameStyle"
+                android:text="@string/team_2_default_name" />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:text="@string/team_2_default_name_irish"
-                android:textColor="#555"
-                android:textSize="16sp" />
+                style="@style/teamNameIrishStyle"
+                android:text="@string/team_2_default_name_irish" />
 
             <TextView
                 android:id="@+id/team_2_score"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/score_default_value"
-                android:textColor="#000"
-                android:textSize="40sp"
-                android:textStyle="bold" />
+                style="@style/overallScoreStyle" />
         </LinearLayout>
 
         <LinearLayout
@@ -202,31 +132,17 @@
             android:orientation="vertical">
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:text="@string/points_header"
-                android:textAllCaps="true"
-                android:textColor="#555"
-                android:textSize="15sp" />
+                style="@style/goalsAndPointsHeaderStyle"
+                android:text="@string/points_header" />
 
             <TextView
                 android:id="@+id/team_2_points"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="@string/score_default_value"
-                android:textColor="#000"
-                android:textSize="75sp"
-                android:textStyle="bold" />
+                style="@style/goalsAndPointsStyle" />
 
             <Button
                 android:id="@+id/team_2_points_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="incrementTeam2Points"
-                android:text="@string/increment_button" />
+                style="@style/buttonStyle"
+                android:onClick="incrementTeam2Points" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
