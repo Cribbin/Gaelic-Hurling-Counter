@@ -7,7 +7,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:baselineAligned="false">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -46,7 +47,8 @@
                 android:id="@+id/team_1_goals_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="+" />
+                android:text="+"
+                android:onClick="incrementTeam1Goals"/>
 
         </LinearLayout>
 
@@ -113,7 +115,8 @@
                 android:id="@+id/team_1_points_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="+" />
+                android:text="+"
+                android:onClick="incrementTeam1Points"/>
 
         </LinearLayout>
 
@@ -155,7 +158,8 @@
                 android:id="@+id/team_2_goals_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="+" />
+                android:text="+"
+                android:onClick="incrementTeam2Goals"/>
 
         </LinearLayout>
 
@@ -222,7 +226,8 @@
                 android:id="@+id/team_2_points_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="+" />
+                android:text="+"
+                android:onClick="incrementTeam2Points"/>
 
         </LinearLayout>
     </LinearLayout>
