@@ -26,7 +26,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:text="Goals"
+                android:text="@string/goals_header"
                 android:textAllCaps="true"
                 android:textColor="#555"
                 android:textSize="15sp" />
@@ -37,7 +37,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="0"
+                android:text="@string/score_default_value"
                 android:textColor="#000"
                 android:textIsSelectable="false"
                 android:textSize="75sp"
@@ -48,7 +48,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="incrementTeam1Goals"
-                android:text="+" />
+                android:text="@string/increment_button" />
 
         </LinearLayout>
 
@@ -63,7 +63,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:text="Team 1"
+                android:text="@string/team_1_default_name"
                 android:textColor="#000"
                 android:textSize="25sp" />
 
@@ -71,7 +71,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:text="Foirne 1"
+                android:text="@string/team_1_default_name_irish"
                 android:textColor="#555"
                 android:textSize="16sp" />
 
@@ -79,7 +79,7 @@
                 android:id="@+id/team_1_score"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0"
+                android:text="@string/score_default_value"
                 android:textColor="#000"
                 android:textSize="40sp"
                 android:textStyle="bold" />
@@ -94,7 +94,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:text="Points"
+                android:text="@string/points_header"
                 android:textAllCaps="true"
                 android:textColor="#555"
                 android:textSize="15sp" />
@@ -105,7 +105,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="0"
+                android:text="@string/score_default_value"
                 android:textColor="#000"
                 android:textSize="75sp"
                 android:textStyle="bold" />
@@ -115,7 +115,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="incrementTeam1Points"
-                android:text="+" />
+                android:text="@string/increment_button" />
 
         </LinearLayout>
 
@@ -137,7 +137,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:text="Goals"
+                android:text="@string/goals_header"
                 android:textAllCaps="true"
                 android:textColor="#555"
                 android:textSize="15sp" />
@@ -148,7 +148,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="0"
+                android:text="@string/score_default_value"
                 android:textColor="#000"
                 android:textIsSelectable="false"
                 android:textSize="75sp"
@@ -159,7 +159,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="incrementTeam2Goals"
-                android:text="+" />
+                android:text="@string/increment_button" />
 
         </LinearLayout>
 
@@ -174,7 +174,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:text="Team 2"
+                android:text="@string/team_2_default_name"
                 android:textColor="#000"
                 android:textSize="25sp" />
 
@@ -182,7 +182,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:text="Foirne 1"
+                android:text="@string/team_2_default_name_irish"
                 android:textColor="#555"
                 android:textSize="16sp" />
 
@@ -190,7 +190,7 @@
                 android:id="@+id/team_2_score"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0"
+                android:text="@string/score_default_value"
                 android:textColor="#000"
                 android:textSize="40sp"
                 android:textStyle="bold" />
@@ -205,7 +205,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:text="Points"
+                android:text="@string/points_header"
                 android:textAllCaps="true"
                 android:textColor="#555"
                 android:textSize="15sp" />
@@ -216,7 +216,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="0"
+                android:text="@string/score_default_value"
                 android:textColor="#000"
                 android:textSize="75sp"
                 android:textStyle="bold" />
@@ -226,7 +226,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="incrementTeam2Points"
-                android:text="+" />
+                android:text="@string/increment_button" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
