@@ -28,7 +28,8 @@
 
             <TextView
                 android:id="@+id/team_1_goals"
-                style="@style/goalsAndPointsStyle" />
+                style="@style/goalsAndPointsStyle"
+                android:onClick="incrementTeam1Goals"/>
 
             <Button
                 android:id="@+id/team_1_goals_button"
@@ -68,7 +69,8 @@
 
             <TextView
                 android:id="@+id/team_1_points"
-                style="@style/goalsAndPointsStyle" />
+                style="@style/goalsAndPointsStyle"
+                android:onClick="incrementTeam1Points"/>
 
             <Button
                 android:id="@+id/team_1_points_button"
@@ -97,7 +99,8 @@
 
             <TextView
                 android:id="@+id/team_2_goals"
-                style="@style/goalsAndPointsStyle" />
+                style="@style/goalsAndPointsStyle"
+                android:onClick="incrementTeam2Goals"/>
 
             <Button
                 android:id="@+id/team_2_goals_button"
@@ -137,7 +140,8 @@
 
             <TextView
                 android:id="@+id/team_2_points"
-                style="@style/goalsAndPointsStyle" />
+                style="@style/goalsAndPointsStyle"
+                android:onClick="incrementTeam2Points"/>
 
             <Button
                 android:id="@+id/team_2_points_button"
