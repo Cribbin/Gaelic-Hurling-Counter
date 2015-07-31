@@ -5,6 +5,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.ListAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -15,9 +18,24 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        createTeams();
+        countyTeam[] teams = createTeams();
+        String[] counties = new String[32];
+
+        for (int i = 0; i < 32; i++) {
+            counties[i] = teams[i].getEnglishName();
+        }
+
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.team_menu);
+
+        ListAdapter teamListAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, counties);
+
+        ListView team1List = (ListView) findViewById(R.id.team_1_list);
+        ListView team2List = (ListView) findViewById(R.id.team_2_list);
+
+        team1List.setAdapter(teamListAdapter);
+        team2List.setAdapter(teamListAdapter);
+
         Toast infoToast = Toast.makeText(this, "Tap a goals or points number to increment it!", Toast.LENGTH_LONG);
         infoToast.show();
     }
