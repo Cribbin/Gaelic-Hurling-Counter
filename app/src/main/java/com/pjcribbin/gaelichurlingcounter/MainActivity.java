@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        createTeams();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toast infoToast = Toast.makeText(this, "Tap a goals or points number to increment it!", Toast.LENGTH_LONG);
@@ -43,51 +44,43 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void incrementTeam1Goals(View v){
-        if(team1Goals < 99) {
+    public void incrementTeam1Goals(View v) {
+        if (team1Goals < 99) {
             team1Goals++;
             team1Score += 3;
             updateTeam1();
-        }
-
-        else
+        } else
             showMaxErrorToast("Goals");
     }
 
-    public void incrementTeam1Points(View v){
-        if(team1Points < 99) {
+    public void incrementTeam1Points(View v) {
+        if (team1Points < 99) {
             team1Points++;
             team1Score++;
             updateTeam1();
-        }
-
-        else
+        } else
             showMaxErrorToast("Points");
     }
 
-    public void incrementTeam2Goals(View v){
-        if(team2Goals < 99) {
+    public void incrementTeam2Goals(View v) {
+        if (team2Goals < 99) {
             team2Goals++;
             team2Score += 3;
             updateTeam2();
-        }
-
-        else
+        } else
             showMaxErrorToast("Goals");
     }
 
-    public void incrementTeam2Points(View v){
-        if(team2Points < 99) {
+    public void incrementTeam2Points(View v) {
+        if (team2Points < 99) {
             team2Points++;
             team2Score++;
             updateTeam2();
-        }
-
-        else
+        } else
             showMaxErrorToast("Points");
     }
 
-    public void updateTeam1(){
+    public void updateTeam1() {
         TextView team1GoalsTextView = (TextView) findViewById(R.id.team_1_goals);
         TextView team1PointsTextView = (TextView) findViewById(R.id.team_1_points);
         TextView team1ScoreTextView = (TextView) findViewById(R.id.team_1_score);
@@ -97,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
         team1ScoreTextView.setText(String.valueOf(team1Score));
     }
 
-    public void updateTeam2(){
+    public void updateTeam2() {
         TextView team2GoalsTextView = (TextView) findViewById(R.id.team_2_goals);
         TextView team2PointsTextView = (TextView) findViewById(R.id.team_2_points);
         TextView team2ScoreTextView = (TextView) findViewById(R.id.team_2_score);
@@ -110,5 +103,76 @@ public class MainActivity extends AppCompatActivity {
     public void showMaxErrorToast(String goalsOrPoints) {
         Toast maxToast = Toast.makeText(this, goalsOrPoints + " cannot exceed 99", Toast.LENGTH_SHORT);
         maxToast.show();
+    }
+
+    public countyTeam[] createTeams() {
+        countyTeam[] teamArray = new countyTeam[32];
+
+        countyTeam antrim = new countyTeam("Antrim", "Aontroim", "ANT");
+        teamArray[0] = antrim;
+        countyTeam armagh = new countyTeam("Armagh", "Ard Mhacha", "ARM");
+        teamArray[1] = armagh;
+        countyTeam carlow = new countyTeam("Carlow", "Ceatharlach", "CAR");
+        teamArray[2] = carlow;
+        countyTeam cavan = new countyTeam("Cavan", "An Cabhán", "CAV");
+        teamArray[3] = cavan;
+        countyTeam clare = new countyTeam("Clare", "An Clár", "CLA");
+        teamArray[4] = clare;
+        countyTeam cork = new countyTeam("Cork", "Corcaigh", "COR");
+        teamArray[5] = cork;
+        countyTeam derry = new countyTeam("Derry", "Doire", "DER");
+        teamArray[6] = derry;
+        countyTeam donegal = new countyTeam("Donegal", "Dún na nGall", "DON");
+        teamArray[7] = donegal;
+        countyTeam down = new countyTeam("Down", "An Dún", "DOW");
+        teamArray[8] = down;
+        countyTeam dublin = new countyTeam("Dublin", "Áth Cliath", "DUB");
+        teamArray[9] = dublin;
+        countyTeam fermanagh = new countyTeam("Fermanagh", "Fear Manach", "FER");
+        teamArray[10] = fermanagh;
+        countyTeam galway = new countyTeam("Galway", "Gaillimh", "GAL");
+        teamArray[11] = galway;
+        countyTeam kerry = new countyTeam("Kerry", "Ciarraí", "KER");
+        teamArray[12] = kerry;
+        countyTeam kildare = new countyTeam("Kildare", "Cill Dara", "KIL");
+        teamArray[13] = kildare;
+        countyTeam kilkenny = new countyTeam("Kilkenny", "Cill Chainnigh", "KIL");
+        teamArray[14] = kilkenny;
+        countyTeam laois = new countyTeam("Laois", "Laois", "LAO");
+        teamArray[15] = laois;
+        countyTeam leitrim = new countyTeam("Leitrim", "Liatroim", "LEI");
+        teamArray[16] = leitrim;
+        countyTeam limerick = new countyTeam("Limerick", "Luimneach", "LIM");
+        teamArray[17] = limerick;
+        countyTeam longford = new countyTeam("Longford", "An Longfort", "LON");
+        teamArray[18] = longford;
+        countyTeam louth = new countyTeam("Louth", "Lú", "LOU");
+        teamArray[19] = louth;
+        countyTeam mayo = new countyTeam("Mayo", "Maigh Eo", "MAY");
+        teamArray[20] = mayo;
+        countyTeam meath = new countyTeam("Meath", "An Mhí", "MEA");
+        teamArray[21] = meath;
+        countyTeam monaghan = new countyTeam("Monaghan", "Muineachán", "MON");
+        teamArray[22] = monaghan;
+        countyTeam offaly = new countyTeam("Offaly", "Uíbh Fhailí", "OFF");
+        teamArray[23] = offaly;
+        countyTeam roscommon = new countyTeam("Roscommon", "Ros Comáin", "ROS");
+        teamArray[24] = roscommon;
+        countyTeam sligo = new countyTeam("Sligo", "Sligeach", "SLI");
+        teamArray[25] = sligo;
+        countyTeam tipperary = new countyTeam("Tipperary", "Tiobraid Árann", "TIP");
+        teamArray[26] = tipperary;
+        countyTeam tyrone = new countyTeam("Tyrone", "Tír Eoghain", "TYR");
+        teamArray[27] = tyrone;
+        countyTeam waterford = new countyTeam("Waterford", "Port Láirge", "WAT");
+        teamArray[28] = waterford;
+        countyTeam westmeath = new countyTeam("Westmeath", "An Iarmhí", "WES");
+        teamArray[29] = westmeath;
+        countyTeam wexford = new countyTeam("Wexford", "Loch Garman", "WEX");
+        teamArray[30] = wexford;
+        countyTeam wicklow = new countyTeam("Wicklow", "Cill Mhantáin", "WIC");
+        teamArray[31] = wicklow;
+
+        return teamArray;
     }
 }
