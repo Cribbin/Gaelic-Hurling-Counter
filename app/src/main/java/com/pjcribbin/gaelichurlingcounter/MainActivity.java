@@ -42,8 +42,6 @@ public class MainActivity extends AppCompatActivity {
 
                         selectedTeam.setText(selection);
                         team1Selected = true;
-
-                        setPointsView();
                     }
                 }
         );
@@ -57,8 +55,6 @@ public class MainActivity extends AppCompatActivity {
 
                         selectedTeam.setText(selection);
                         team2Selected = true;
-
-                        setPointsView();
                     }
                 }
         );
@@ -223,10 +219,13 @@ public class MainActivity extends AppCompatActivity {
         infoToast.show();
     }
 
-    public void setPointsView() {
+    public void setPointsActivity(View v) {
         if(team1Selected && team2Selected) {
             setContentView(R.layout.activity_main);
             showIntroToast();
+        } else {
+            Toast noSelectionTeoast = Toast.makeText(this, "Must choose two teams before proceeding", Toast.LENGTH_SHORT);
+            noSelectionTeoast.show();
         }
     }
 }
