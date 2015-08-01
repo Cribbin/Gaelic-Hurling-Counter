@@ -34,10 +34,10 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginTop="16dp"
-        android:layout_marginBottom="8dp"
         android:background="#000" />
 
     <LinearLayout
@@ -65,4 +65,10 @@
     <ListView
         android:id="@+id/team_2_list"
         style="@style/teamSelectionMenus" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="setPointsActivity"
+        android:text="Choose Teams" />
 </LinearLayout>
