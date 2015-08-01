@@ -9,11 +9,9 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        style="@style/teamOverallStyle">
+    <LinearLayout style="@style/teamOverallStyle">
 
-        <LinearLayout
-            style="@style/teamEdgesStyle">
+        <LinearLayout style="@style/teamEdgesStyle">
 
             <TextView
                 style="@style/goalsAndPointsHeaderStyle"
@@ -22,18 +20,19 @@
             <TextView
                 android:id="@+id/team_1_goals"
                 style="@style/goalsAndPointsStyle"
-                android:onClick="incrementTeam1Goals"/>
+                android:onClick="incrementTeam1Goals" />
 
         </LinearLayout>
 
-        <LinearLayout
-            style="@style/teamCenterStyle">
+        <LinearLayout style="@style/teamCenterStyle">
 
             <TextView
+                android:id="@+id/team_1_english_name"
                 style="@style/teamNameStyle"
                 android:text="@string/team_1_default_name" />
 
             <TextView
+                android:id="@+id/team_1_irish_name"
                 style="@style/teamNameIrishStyle"
                 android:text="@string/team_1_default_name_irish" />
 
@@ -42,8 +41,7 @@
                 style="@style/overallScoreStyle" />
         </LinearLayout>
 
-        <LinearLayout
-            style="@style/teamEdgesStyle">
+        <LinearLayout style="@style/teamEdgesStyle">
 
             <TextView
                 style="@style/goalsAndPointsHeaderStyle"
@@ -52,7 +50,7 @@
             <TextView
                 android:id="@+id/team_1_points"
                 style="@style/goalsAndPointsStyle"
-                android:onClick="incrementTeam1Points"/>
+                android:onClick="incrementTeam1Points" />
 
         </LinearLayout>
 
@@ -61,15 +59,13 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="#333"
+        android:layout_marginBottom="16dp"
         android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"/>
+        android:background="#333" />
 
-    <LinearLayout
-        style="@style/teamOverallStyle">
+    <LinearLayout style="@style/teamOverallStyle">
 
-        <LinearLayout
-            style="@style/teamEdgesStyle">
+        <LinearLayout style="@style/teamEdgesStyle">
 
             <TextView
                 style="@style/goalsAndPointsHeaderStyle"
@@ -78,18 +74,19 @@
             <TextView
                 android:id="@+id/team_2_goals"
                 style="@style/goalsAndPointsStyle"
-                android:onClick="incrementTeam2Goals"/>
+                android:onClick="incrementTeam2Goals" />
 
         </LinearLayout>
 
-        <LinearLayout
-            style="@style/teamCenterStyle">
+        <LinearLayout style="@style/teamCenterStyle">
 
             <TextView
+                android:id="@+id/team_2_english_name"
                 style="@style/teamNameStyle"
                 android:text="@string/team_2_default_name" />
 
             <TextView
+                android:id="@+id/team_2_irish_name"
                 style="@style/teamNameIrishStyle"
                 android:text="@string/team_2_default_name_irish" />
 
@@ -99,8 +96,7 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            style="@style/teamEdgesStyle">
+        <LinearLayout style="@style/teamEdgesStyle">
 
             <TextView
                 style="@style/goalsAndPointsHeaderStyle"
@@ -109,7 +105,7 @@
             <TextView
                 android:id="@+id/team_2_points"
                 style="@style/goalsAndPointsStyle"
-                android:onClick="incrementTeam2Points"/>
+                android:onClick="incrementTeam2Points" />
 
         </LinearLayout>
     </LinearLayout>

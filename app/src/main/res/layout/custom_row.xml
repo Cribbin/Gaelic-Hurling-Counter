@@ -5,23 +5,23 @@
     android:orientation="horizontal">
 
     <TextView
-        android:layout_marginTop="8dp"
-        android:layout_marginLeft="8dp"
+        android:id="@+id/english_name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:textSize="32sp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
         android:text="Large Text"
-        android:id="@+id/textView"
         android:textColor="#000"
-        android:layout_weight="1"/>
+        android:textSize="32sp" />
 
     <TextView
-        android:layout_marginTop="8dp"
-        android:layout_marginRight="8dp"
+        android:id="@+id/irish_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="24sp"
-        android:textColor="#777"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
         android:text="Large Text"
-        android:id="@+id/textView2" />
+        android:textColor="#777"
+        android:textSize="24sp" />
 </LinearLayout>
