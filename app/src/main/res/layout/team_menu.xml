@@ -61,8 +61,8 @@
         style="@style/teamSelectionMenus" />
 
     <Button
+        android:id="@+id/choose_teams_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="setPointsActivity"
         android:text="Choose Teams" />
 </LinearLayout>

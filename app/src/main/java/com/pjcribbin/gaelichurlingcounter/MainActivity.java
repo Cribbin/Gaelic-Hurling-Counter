@@ -6,6 +6,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -17,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
     int team2Goals = 0, team2Points = 0, team2Score = 0;
     boolean team1Selected = false;
     boolean team2Selected = false;
+    int position1;
+    int position2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
                         TextView selectedTeam = (TextView) findViewById(R.id.team_1_choice);
                         String selection = teams[position].getEnglishName();
+                        position1 = position;
 
                         selectedTeam.setText(selection);
                         team1Selected = true;
@@ -52,9 +56,20 @@ public class MainActivity extends AppCompatActivity {
                     public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
                         TextView selectedTeam = (TextView) findViewById(R.id.team_2_choice);
                         String selection = teams[position].getEnglishName();
+                        position2 = position;
 
                         selectedTeam.setText(selection);
                         team2Selected = true;
+                    }
+                }
+        );
+
+        Button chooseTeamsButton = (Button) findViewById(R.id.choose_teams_button);
+
+        chooseTeamsButton.setOnClickListener(
+                new View.OnClickListener() {
+                    public void onClick(View view) {
+                        setPointsActivity(teams);
                     }
                 }
         );
@@ -219,9 +234,22 @@ public class MainActivity extends AppCompatActivity {
         infoToast.show();
     }
 
-    public void setPointsActivity(View v) {
-        if(team1Selected && team2Selected) {
+    public void setPointsActivity(countyTeam[] teams) {
+        if (team1Selected && team2Selected) {
             setContentView(R.layout.activity_main);
+
+            TextView team1EnglishName = (TextView) findViewById(R.id.team_1_english_name);
+            team1EnglishName.setText(teams[position1].getEnglishName());
+
+            TextView team1IrishName = (TextView) findViewById(R.id.team_1_irish_name);
+            team1IrishName.setText(teams[position1].getIrishName());
+
+            TextView team2EnglishName = (TextView) findViewById(R.id.team_2_english_name);
+            team2EnglishName.setText(teams[position2].getEnglishName());
+
+            TextView team2IrishName = (TextView) findViewById(R.id.team_2_irish_name);
+            team2IrishName.setText(teams[position2].getIrishName());
+
             showIntroToast();
         } else {
             Toast noSelectionTeoast = Toast.makeText(this, "Must choose two teams before proceeding", Toast.LENGTH_SHORT);
