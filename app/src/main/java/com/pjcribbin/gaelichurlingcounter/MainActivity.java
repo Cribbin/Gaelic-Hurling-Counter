@@ -15,10 +15,12 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
     int team1Goals = 0, team1Points = 0, team1Score = 0;
     int team2Goals = 0, team2Points = 0, team2Score = 0;
+    boolean team1Selected = false;
+    boolean team2Selected = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        countyTeam[] teams = createTeams();
+        final countyTeam[] teams = createTeams();
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.team_menu);
@@ -35,8 +37,28 @@ public class MainActivity extends AppCompatActivity {
                 new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
-                        setContentView(R.layout.activity_main);
-                        showIntroToast();
+                        TextView selectedTeam = (TextView) findViewById(R.id.team_1_choice);
+                        String selection = teams[position].getEnglishName();
+
+                        selectedTeam.setText(selection);
+                        team1Selected = true;
+
+                        setPointsView();
+                    }
+                }
+        );
+
+        team2List.setOnItemClickListener(
+                new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
+                        TextView selectedTeam = (TextView) findViewById(R.id.team_2_choice);
+                        String selection = teams[position].getEnglishName();
+
+                        selectedTeam.setText(selection);
+                        team2Selected = true;
+
+                        setPointsView();
                     }
                 }
         );
@@ -199,5 +221,12 @@ public class MainActivity extends AppCompatActivity {
     public void showIntroToast() {
         Toast infoToast = Toast.makeText(this, "Tap a goals or points number to increment it!", Toast.LENGTH_LONG);
         infoToast.show();
+    }
+
+    public void setPointsView() {
+        if(team1Selected && team2Selected) {
+            setContentView(R.layout.activity_main);
+            showIntroToast();
+        }
     }
 }
