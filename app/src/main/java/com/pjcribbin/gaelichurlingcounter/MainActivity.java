@@ -191,7 +191,7 @@ public class MainActivity extends AppCompatActivity {
         teamArray[7] = donegal;
         countyTeam down = new countyTeam("Down", "An Dún", "DOW", red, black);
         teamArray[8] = down;
-        countyTeam dublin = new countyTeam("Dublin", "Áth Cliath", "DUB", lBlue, dBlue);
+        countyTeam dublin = new countyTeam("Dublin", "Áth Cliath", "DUB", dBlue, lBlue);
         teamArray[9] = dublin;
         countyTeam fermanagh = new countyTeam("Fermanagh", "Fear Manach", "FER", green, white);
         teamArray[10] = fermanagh;
@@ -261,6 +261,18 @@ public class MainActivity extends AppCompatActivity {
 
             TextView team2IrishName = (TextView) findViewById(R.id.team_2_irish_name);
             team2IrishName.setText(teams[position2].getIrishName());
+
+            View team1LeftColour = findViewById(R.id.left_colour_team_1);
+            team1LeftColour.setBackgroundColor(teams[position1].getPrimaryColour());
+
+            View team1RightColour = findViewById(R.id.right_colour_team_1);
+            team1RightColour.setBackgroundColor(teams[position1].getSecondaryColour());
+
+            View team2LeftColour = findViewById(R.id.left_colour_team_2);
+            team2LeftColour.setBackgroundColor(teams[position2].getPrimaryColour());
+
+            View team2RightColour = findViewById(R.id.right_colour_team_2);
+            team2RightColour.setBackgroundColor(teams[position2].getSecondaryColour());
 
             showIntroToast();
         } else {
