@@ -24,8 +24,16 @@ public class TeamListAdapter extends ArrayAdapter<countyTeam> {
         String individualIrishName = (getItem(position)).getIrishName();
         TextView irishNameTextView = (TextView) customView.findViewById(R.id.irish_name);
 
+        int primaryColour = (getItem(position)).getPrimaryColour();
+        View colourLeft = customView.findViewById(R.id.primary_colour);
+
+        int secondaryColour = (getItem(position)).getSecondaryColour();
+        View colourRight = customView.findViewById(R.id.secondary_colour);
+
         englishNameTextView.setText(individualEnglishName);
         irishNameTextView.setText(individualIrishName);
+        colourLeft.setBackgroundColor(primaryColour);
+        colourRight.setBackgroundColor(secondaryColour);
         return customView;
     }
 

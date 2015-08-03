@@ -4,24 +4,52 @@
     android:layout_height="match_parent"
     android:orientation="horizontal">
 
+    <LinearLayout
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/primary_colour"
+            android:layout_width="8dp"
+            android:layout_height="0dp"
+            android:background="#000000"
+            android:layout_weight="1"/>
+
+        <View
+            android:id="@+id/secondary_colour"
+            android:layout_width="8dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#ffffff"/>
+
+
+    </LinearLayout>
+
     <TextView
         android:id="@+id/english_name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
         android:layout_weight="1"
+        android:padding="8dp"
         android:text="English Name"
         android:textColor="#000"
-        android:textSize="32sp" />
+        android:textSize="24sp" />
 
     <TextView
         android:id="@+id/irish_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginTop="8dp"
+        android:padding="8dp"
         android:text="Irish Name"
         android:textColor="#777"
-        android:textSize="24sp" />
+        android:textSize="16sp" />
+
+
 </LinearLayout>
