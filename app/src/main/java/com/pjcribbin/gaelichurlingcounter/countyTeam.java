@@ -4,10 +4,10 @@ public class countyTeam {
     private String englishName;
     private String irishName;
     private String countyCode;
-    private String primaryColour;
-    private String secondaryColour;
+    private int primaryColour;
+    private int secondaryColour;
 
-    countyTeam(String englishName, String irishName, String countyCode, String primaryColour, String secondaryColour) {
+    countyTeam(String englishName, String irishName, String countyCode, int primaryColour, int secondaryColour) {
         this.englishName = englishName;
         this.irishName = irishName;
         this.countyCode = countyCode;
@@ -33,11 +33,11 @@ public class countyTeam {
         return countyCode;
     }
 
-    public String getPrimaryColour() {
+    public int getPrimaryColour() {
         return primaryColour;
     }
 
-    public String getSecondaryColour() {
+    public int getSecondaryColour() {
         return secondaryColour;
     }
 }

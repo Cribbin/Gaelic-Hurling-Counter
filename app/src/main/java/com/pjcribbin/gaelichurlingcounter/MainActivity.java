@@ -160,18 +160,18 @@ public class MainActivity extends AppCompatActivity {
 
     public countyTeam[] createTeams() {
         countyTeam[] teamArray = new countyTeam[32];
-        String green = "#009900";
-        String red = "#ff0000";
-        String yellow = "#ffff00";
-        String white = "#000000";
-        String black = "#ffffff";
-        String orange = "#ff8800";
-        String blue = "#0000ff";
-        String dBlue = "#000080";
-        String lBlue = "#88b8fd";
-        String maroon = "990000";
-        String amber = "#ffd700";
-        String purple = "#660099";
+        int green = 0xff009900;
+        int red = 0xffff0000;
+        int yellow = 0xffffff00;
+        int white = 0xffffffff;
+        int black = 0xff000000;
+        int orange = 0xffff8800;
+        int blue = 0xff0000ff;
+        int dBlue = 0xff000080;
+        int lBlue = 0xff88b8fd;
+        int maroon = 0xff990000;
+        int amber = 0xffffd700;
+        int purple = 0xff660099;
 
         countyTeam antrim = new countyTeam("Antrim", "Aontroim", "ANT", yellow, white);
         teamArray[0] = antrim;
