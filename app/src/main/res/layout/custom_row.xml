@@ -5,25 +5,25 @@
     android:orientation="horizontal">
 
     <LinearLayout
-        android:layout_marginTop="4dp"
-        android:layout_marginBottom="4dp"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="4dp"
         android:orientation="vertical">
 
         <View
             android:id="@+id/primary_colour"
             android:layout_width="8dp"
             android:layout_height="0dp"
-            android:background="#000000"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:background="#000000" />
 
         <View
             android:id="@+id/secondary_colour"
             android:layout_width="8dp"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:background="#ffffff"/>
+            android:background="#ffffff" />
 
 
     </LinearLayout>

@@ -7,9 +7,9 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
-public class TeamListAdapter extends ArrayAdapter<countyTeam> {
+public class TeamListAdapter extends ArrayAdapter<CountyTeam> {
 
-    public TeamListAdapter(Context context, countyTeam[] teams) {
+    public TeamListAdapter(Context context, CountyTeam[] teams) {
         super(context, R.layout.custom_row, teams);
     }
 

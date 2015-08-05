@@ -18,24 +18,23 @@ public class MainActivity extends AppCompatActivity {
     int team2Goals = 0, team2Points = 0, team2Score = 0;
     boolean team1Selected = false;
     boolean team2Selected = false;
+    //County user chooses in team menu
     int position1;
     int position2;
 
+    //Displays two option menus for team selection and button to finalize choices
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        final countyTeam[] teams = createTeams();
+        final CountyTeam[] teams = createTeams();
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.team_menu);
 
         ListAdapter teamListAdapter = new TeamListAdapter(this, teams);
 
+        //Team 1 menu
         ListView team1List = (ListView) findViewById(R.id.team_1_list);
-        ListView team2List = (ListView) findViewById(R.id.team_2_list);
-
         team1List.setAdapter(teamListAdapter);
-        team2List.setAdapter(teamListAdapter);
-
         team1List.setOnItemClickListener(
                 new AdapterView.OnItemClickListener() {
                     @Override
@@ -50,6 +49,9 @@ public class MainActivity extends AppCompatActivity {
                 }
         );
 
+        //Team 2 Menu
+        ListView team2List = (ListView) findViewById(R.id.team_2_list);
+        team2List.setAdapter(teamListAdapter);
         team2List.setOnItemClickListener(
                 new AdapterView.OnItemClickListener() {
                     @Override
@@ -64,8 +66,8 @@ public class MainActivity extends AppCompatActivity {
                 }
         );
 
+        //Selection button
         Button chooseTeamsButton = (Button) findViewById(R.id.choose_teams_button);
-
         chooseTeamsButton.setOnClickListener(
                 new View.OnClickListener() {
                     public void onClick(View view) {
@@ -153,100 +155,20 @@ public class MainActivity extends AppCompatActivity {
         team2ScoreTextView.setText(String.valueOf(team2Score));
     }
 
+    //Displays toast if max off 99 points/goals is reached
     public void showMaxErrorToast(String goalsOrPoints) {
         Toast maxToast = Toast.makeText(this, goalsOrPoints + " cannot exceed 99", Toast.LENGTH_SHORT);
         maxToast.show();
     }
 
-    public countyTeam[] createTeams() {
-        countyTeam[] teamArray = new countyTeam[32];
-        int green = 0xff009900;
-        int red = 0xffff0000;
-        int yellow = 0xffffff00;
-        int white = 0xffffffff;
-        int black = 0xff000000;
-        int orange = 0xffff8800;
-        int blue = 0xff0000ff;
-        int dBlue = 0xff000080;
-        int lBlue = 0xff88b8fd;
-        int maroon = 0xff990000;
-        int amber = 0xffffd700;
-        int purple = 0xff660099;
-
-        countyTeam antrim = new countyTeam("Antrim", "Aontroim", "ANT", yellow, white);
-        teamArray[0] = antrim;
-        countyTeam armagh = new countyTeam("Armagh", "Ard Mhacha", "ARM", orange, white);
-        teamArray[1] = armagh;
-        countyTeam carlow = new countyTeam("Carlow", "Ceatharlach", "CAR", red, green);
-        teamArray[2] = carlow;
-        countyTeam cavan = new countyTeam("Cavan", "An Cabhán", "CAV", blue, white);
-        teamArray[3] = cavan;
-        countyTeam clare = new countyTeam("Clare", "An Clár", "CLA", yellow, blue);
-        teamArray[4] = clare;
-        countyTeam cork = new countyTeam("Cork", "Corcaigh", "COR", red, white);
-        teamArray[5] = cork;
-        countyTeam derry = new countyTeam("Derry", "Doire", "DER", red, white);
-        teamArray[6] = derry;
-        countyTeam donegal = new countyTeam("Donegal", "Dún na nGall", "DON", green, yellow);
-        teamArray[7] = donegal;
-        countyTeam down = new countyTeam("Down", "An Dún", "DOW", red, black);
-        teamArray[8] = down;
-        countyTeam dublin = new countyTeam("Dublin", "Áth Cliath", "DUB", dBlue, lBlue);
-        teamArray[9] = dublin;
-        countyTeam fermanagh = new countyTeam("Fermanagh", "Fear Manach", "FER", green, white);
-        teamArray[10] = fermanagh;
-        countyTeam galway = new countyTeam("Galway", "Gaillimh", "GAL", maroon, white);
-        teamArray[11] = galway;
-        countyTeam kerry = new countyTeam("Kerry", "Ciarraí", "KER", green, yellow);
-        teamArray[12] = kerry;
-        countyTeam kildare = new countyTeam("Kildare", "Cill Dara", "KLD", white, white);
-        teamArray[13] = kildare;
-        countyTeam kilkenny = new countyTeam("Kilkenny", "Cill Chainnigh", "KLK", black, amber);
-        teamArray[14] = kilkenny;
-        countyTeam laois = new countyTeam("Laois", "Laois", "LAO", blue, yellow);
-        teamArray[15] = laois;
-        countyTeam leitrim = new countyTeam("Leitrim", "Liatroim", "LEI", green, yellow);
-        teamArray[16] = leitrim;
-        countyTeam limerick = new countyTeam("Limerick", "Luimneach", "LIM", green, white);
-        teamArray[17] = limerick;
-        countyTeam longford = new countyTeam("Longford", "An Longfort", "LON", blue, yellow);
-        teamArray[18] = longford;
-        countyTeam louth = new countyTeam("Louth", "Lú", "LOU", red, white);
-        teamArray[19] = louth;
-        countyTeam mayo = new countyTeam("Mayo", "Maigh Eo", "MAY", green, red);
-        teamArray[20] = mayo;
-        countyTeam meath = new countyTeam("Meath", "An Mhí", "MEA", green, yellow);
-        teamArray[21] = meath;
-        countyTeam monaghan = new countyTeam("Monaghan", "Muineachán", "MON", white, blue);
-        teamArray[22] = monaghan;
-        countyTeam offaly = new countyTeam("Offaly", "Uíbh Fhailí", "OFF", green, yellow);
-        teamArray[23] = offaly;
-        countyTeam roscommon = new countyTeam("Roscommon", "Ros Comáin", "ROS", green, yellow);
-        teamArray[24] = roscommon;
-        countyTeam sligo = new countyTeam("Sligo", "Sligeach", "SLI", black, white);
-        teamArray[25] = sligo;
-        countyTeam tipperary = new countyTeam("Tipperary", "Tiobraid Árann", "TIP", blue, yellow);
-        teamArray[26] = tipperary;
-        countyTeam tyrone = new countyTeam("Tyrone", "Tír Eoghain", "TYR", white, red);
-        teamArray[27] = tyrone;
-        countyTeam waterford = new countyTeam("Waterford", "Port Láirge", "WAT", white, blue);
-        teamArray[28] = waterford;
-        countyTeam westmeath = new countyTeam("Westmeath", "An Iarmhí", "WES", maroon, white);
-        teamArray[29] = westmeath;
-        countyTeam wexford = new countyTeam("Wexford", "Loch Garman", "WEX", purple, yellow);
-        teamArray[30] = wexford;
-        countyTeam wicklow = new countyTeam("Wicklow", "Cill Mhantáin", "WIC", blue, yellow);
-        teamArray[31] = wicklow;
-
-        return teamArray;
-    }
-
+    //Displays toast after team selection giving instructions
     public void showIntroToast() {
         Toast infoToast = Toast.makeText(this, "Tap a goals or points number to increment it!", Toast.LENGTH_LONG);
         infoToast.show();
     }
 
-    public void setPointsActivity(countyTeam[] teams) {
+    //Displays the main goals and points screen
+    public void setPointsActivity(CountyTeam[] teams) {
         if (team1Selected && team2Selected) {
             setContentView(R.layout.activity_main);
 
@@ -279,5 +201,88 @@ public class MainActivity extends AppCompatActivity {
             Toast noSelectionTeoast = Toast.makeText(this, "Must choose two teams before proceeding", Toast.LENGTH_SHORT);
             noSelectionTeoast.show();
         }
+    }
+
+    public CountyTeam[] createTeams() {
+        CountyTeam[] teamArray = new CountyTeam[32];
+        int green = 0xff009900;
+        int red = 0xffff0000;
+        int yellow = 0xffffff00;
+        int white = 0xffffffff;
+        int black = 0xff000000;
+        int orange = 0xffff8800;
+        int blue = 0xff0000ff;
+        int dBlue = 0xff000080;
+        int lBlue = 0xff88b8fd;
+        int maroon = 0xff990000;
+        int amber = 0xffffd700;
+        int purple = 0xff660099;
+
+        CountyTeam antrim = new CountyTeam("Antrim", "Aontroim", "ANT", yellow, white);
+        teamArray[0] = antrim;
+        CountyTeam armagh = new CountyTeam("Armagh", "Ard Mhacha", "ARM", orange, white);
+        teamArray[1] = armagh;
+        CountyTeam carlow = new CountyTeam("Carlow", "Ceatharlach", "CAR", red, green);
+        teamArray[2] = carlow;
+        CountyTeam cavan = new CountyTeam("Cavan", "An Cabhán", "CAV", blue, white);
+        teamArray[3] = cavan;
+        CountyTeam clare = new CountyTeam("Clare", "An Clár", "CLA", yellow, blue);
+        teamArray[4] = clare;
+        CountyTeam cork = new CountyTeam("Cork", "Corcaigh", "COR", red, white);
+        teamArray[5] = cork;
+        CountyTeam derry = new CountyTeam("Derry", "Doire", "DER", red, white);
+        teamArray[6] = derry;
+        CountyTeam donegal = new CountyTeam("Donegal", "Dún na nGall", "DON", green, yellow);
+        teamArray[7] = donegal;
+        CountyTeam down = new CountyTeam("Down", "An Dún", "DOW", red, black);
+        teamArray[8] = down;
+        CountyTeam dublin = new CountyTeam("Dublin", "Áth Cliath", "DUB", dBlue, lBlue);
+        teamArray[9] = dublin;
+        CountyTeam fermanagh = new CountyTeam("Fermanagh", "Fear Manach", "FER", green, white);
+        teamArray[10] = fermanagh;
+        CountyTeam galway = new CountyTeam("Galway", "Gaillimh", "GAL", maroon, white);
+        teamArray[11] = galway;
+        CountyTeam kerry = new CountyTeam("Kerry", "Ciarraí", "KER", green, yellow);
+        teamArray[12] = kerry;
+        CountyTeam kildare = new CountyTeam("Kildare", "Cill Dara", "KLD", white, white);
+        teamArray[13] = kildare;
+        CountyTeam kilkenny = new CountyTeam("Kilkenny", "Cill Chainnigh", "KLK", black, amber);
+        teamArray[14] = kilkenny;
+        CountyTeam laois = new CountyTeam("Laois", "Laois", "LAO", blue, yellow);
+        teamArray[15] = laois;
+        CountyTeam leitrim = new CountyTeam("Leitrim", "Liatroim", "LEI", green, yellow);
+        teamArray[16] = leitrim;
+        CountyTeam limerick = new CountyTeam("Limerick", "Luimneach", "LIM", green, white);
+        teamArray[17] = limerick;
+        CountyTeam longford = new CountyTeam("Longford", "An Longfort", "LON", blue, yellow);
+        teamArray[18] = longford;
+        CountyTeam louth = new CountyTeam("Louth", "Lú", "LOU", red, white);
+        teamArray[19] = louth;
+        CountyTeam mayo = new CountyTeam("Mayo", "Maigh Eo", "MAY", green, red);
+        teamArray[20] = mayo;
+        CountyTeam meath = new CountyTeam("Meath", "An Mhí", "MEA", green, yellow);
+        teamArray[21] = meath;
+        CountyTeam monaghan = new CountyTeam("Monaghan", "Muineachán", "MON", white, blue);
+        teamArray[22] = monaghan;
+        CountyTeam offaly = new CountyTeam("Offaly", "Uíbh Fhailí", "OFF", green, yellow);
+        teamArray[23] = offaly;
+        CountyTeam roscommon = new CountyTeam("Roscommon", "Ros Comáin", "ROS", green, yellow);
+        teamArray[24] = roscommon;
+        CountyTeam sligo = new CountyTeam("Sligo", "Sligeach", "SLI", black, white);
+        teamArray[25] = sligo;
+        CountyTeam tipperary = new CountyTeam("Tipperary", "Tiobraid Árann", "TIP", blue, yellow);
+        teamArray[26] = tipperary;
+        CountyTeam tyrone = new CountyTeam("Tyrone", "Tír Eoghain", "TYR", white, red);
+        teamArray[27] = tyrone;
+        CountyTeam waterford = new CountyTeam("Waterford", "Port Láirge", "WAT", white, blue);
+        teamArray[28] = waterford;
+        CountyTeam westmeath = new CountyTeam("Westmeath", "An Iarmhí", "WES", maroon, white);
+        teamArray[29] = westmeath;
+        CountyTeam wexford = new CountyTeam("Wexford", "Loch Garman", "WEX", purple, yellow);
+        teamArray[30] = wexford;
+        CountyTeam wicklow = new CountyTeam("Wicklow", "Cill Mhantáin", "WIC", blue, yellow);
+        teamArray[31] = wicklow;
+
+        return teamArray;
     }
 }
