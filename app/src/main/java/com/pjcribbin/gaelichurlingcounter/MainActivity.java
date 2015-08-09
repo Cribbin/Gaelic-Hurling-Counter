@@ -75,6 +75,82 @@ public class MainActivity extends AppCompatActivity {
         );
     }
 
+    //Displays the main goals and points screen
+    public void setPointsActivity(CountyTeam[] teams) {
+        if (team1Selected && team2Selected) {
+            setContentView(R.layout.activity_main);
+
+            TextView team1EnglishName = (TextView) findViewById(R.id.team_1_english_name);
+            team1EnglishName.setText(teams[position1].getEnglishName());
+
+            TextView team1IrishName = (TextView) findViewById(R.id.team_1_irish_name);
+            team1IrishName.setText(teams[position1].getIrishName());
+
+            TextView team2EnglishName = (TextView) findViewById(R.id.team_2_english_name);
+            team2EnglishName.setText(teams[position2].getEnglishName());
+
+            TextView team2IrishName = (TextView) findViewById(R.id.team_2_irish_name);
+            team2IrishName.setText(teams[position2].getIrishName());
+
+            View team1LeftColour = findViewById(R.id.left_colour_team_1);
+            team1LeftColour.setBackgroundColor(teams[position1].getPrimaryColour());
+
+            View team1RightColour = findViewById(R.id.right_colour_team_1);
+            team1RightColour.setBackgroundColor(teams[position1].getSecondaryColour());
+
+            View team2LeftColour = findViewById(R.id.left_colour_team_2);
+            team2LeftColour.setBackgroundColor(teams[position2].getPrimaryColour());
+
+            View team2RightColour = findViewById(R.id.right_colour_team_2);
+            team2RightColour.setBackgroundColor(teams[position2].getSecondaryColour());
+
+            showIntroToast();
+        } else {
+            Toast noSelectionTeoast = Toast.makeText(this, "Must choose two teams before proceeding", Toast.LENGTH_SHORT);
+            noSelectionTeoast.show();
+        }
+
+        setUpLongClickListeners();
+    }
+
+    private void setUpLongClickListeners(){
+        TextView team1GoalsTV = (TextView) findViewById(R.id.team_1_goals);
+        team1GoalsTV.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                decrementTeam1Goals();
+                return true;
+            }
+        });
+
+        TextView team1PointsTV = (TextView) findViewById(R.id.team_1_points);
+        team1PointsTV.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                decrementTeam1Points();
+                return true;
+            }
+        });
+
+        TextView team2GoalsTV = (TextView) findViewById(R.id.team_2_goals);
+        team2GoalsTV.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                decrementTeam2Goals();
+                return true;
+            }
+        });
+
+        TextView team2PointsTV = (TextView) findViewById(R.id.team_2_points);
+        team2PointsTV.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                decrementTeam2Points();
+                return true;
+            }
+        });
+    }
+
     public void incrementTeam1Goals(View v) {
         if (team1Goals < 99) {
             team1Goals++;
@@ -84,7 +160,7 @@ public class MainActivity extends AppCompatActivity {
             showMaxErrorToast("Goals");
     }
 
-    public void decrementTeam1Goals(View v) {
+    public void decrementTeam1Goals() {
         if (team1Goals > 0) {
             team1Goals--;
             team1Score -= 3;
@@ -102,7 +178,7 @@ public class MainActivity extends AppCompatActivity {
             showMaxErrorToast("Points");
     }
 
-    public void decrementTeam1Points(View v) {
+    public void decrementTeam1Points() {
         if (team1Points > 0) {
             team1Points--;
             team1Score--;
@@ -120,13 +196,13 @@ public class MainActivity extends AppCompatActivity {
             showMaxErrorToast("Goals");
     }
 
-    public void decrementTeam2Goals(View v) {
+    public void decrementTeam2Goals() {
         if (team2Goals > 0) {
             team2Goals--;
             team2Score -= 3;
             updateTeam2();
         } else
-            showMaxErrorToast("Goals");
+            showMinErrorToast("Goals");
     }
 
     public void incrementTeam2Points(View v) {
@@ -138,13 +214,13 @@ public class MainActivity extends AppCompatActivity {
             showMaxErrorToast("Points");
     }
 
-    public void decrementTeam2Points(View v) {
+    public void decrementTeam2Points() {
         if (team2Points > 0) {
             team2Points--;
             team2Score--;
             updateTeam2();
         } else
-            showMaxErrorToast("Points");
+            showMinErrorToast("Points");
     }
 
     public void updateTeam1() {
@@ -183,42 +259,6 @@ public class MainActivity extends AppCompatActivity {
     public void showIntroToast() {
         Toast infoToast = Toast.makeText(this, "Tap a number to increment it!\nHold a number to decrement it!", Toast.LENGTH_LONG);
         infoToast.show();
-    }
-
-    //Displays the main goals and points screen
-    public void setPointsActivity(CountyTeam[] teams) {
-        if (team1Selected && team2Selected) {
-            setContentView(R.layout.activity_main);
-
-            TextView team1EnglishName = (TextView) findViewById(R.id.team_1_english_name);
-            team1EnglishName.setText(teams[position1].getEnglishName());
-
-            TextView team1IrishName = (TextView) findViewById(R.id.team_1_irish_name);
-            team1IrishName.setText(teams[position1].getIrishName());
-
-            TextView team2EnglishName = (TextView) findViewById(R.id.team_2_english_name);
-            team2EnglishName.setText(teams[position2].getEnglishName());
-
-            TextView team2IrishName = (TextView) findViewById(R.id.team_2_irish_name);
-            team2IrishName.setText(teams[position2].getIrishName());
-
-            View team1LeftColour = findViewById(R.id.left_colour_team_1);
-            team1LeftColour.setBackgroundColor(teams[position1].getPrimaryColour());
-
-            View team1RightColour = findViewById(R.id.right_colour_team_1);
-            team1RightColour.setBackgroundColor(teams[position1].getSecondaryColour());
-
-            View team2LeftColour = findViewById(R.id.left_colour_team_2);
-            team2LeftColour.setBackgroundColor(teams[position2].getPrimaryColour());
-
-            View team2RightColour = findViewById(R.id.right_colour_team_2);
-            team2RightColour.setBackgroundColor(teams[position2].getSecondaryColour());
-
-            showIntroToast();
-        } else {
-            Toast noSelectionTeoast = Toast.makeText(this, "Must choose two teams before proceeding", Toast.LENGTH_SHORT);
-            noSelectionTeoast.show();
-        }
     }
 
     public CountyTeam[] createTeams() {
