@@ -220,9 +220,9 @@ public class MainActivity extends AppCompatActivity {
         teamArray[11] = galway;
         CountyTeam kerry = new CountyTeam("Kerry", "Ciarraí", "KER", green, yellow);
         teamArray[12] = kerry;
-        CountyTeam kildare = new CountyTeam("Kildare", "Cill Dara", "KLD", white, white);
+        CountyTeam kildare = new CountyTeam("Kildare", "Cill Dara", "KID", white, white);
         teamArray[13] = kildare;
-        CountyTeam kilkenny = new CountyTeam("Kilkenny", "Cill Chainnigh", "KLK", black, amber);
+        CountyTeam kilkenny = new CountyTeam("Kilkenny", "Cill Chainnigh", "KIK", black, amber);
         teamArray[14] = kilkenny;
         CountyTeam laois = new CountyTeam("Laois", "Laois", "LAO", blue, yellow);
         teamArray[15] = laois;
