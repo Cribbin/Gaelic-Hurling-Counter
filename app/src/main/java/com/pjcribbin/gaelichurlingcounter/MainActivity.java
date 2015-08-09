@@ -84,6 +84,15 @@ public class MainActivity extends AppCompatActivity {
             showMaxErrorToast("Goals");
     }
 
+    public void decrementTeam1Goals(View v) {
+        if (team1Goals > 0) {
+            team1Goals--;
+            team1Score -= 3;
+            updateTeam1();
+        } else
+            showMinErrorToast("Goals");
+    }
+
     public void incrementTeam1Points(View v) {
         if (team1Points < 99) {
             team1Points++;
@@ -91,6 +100,15 @@ public class MainActivity extends AppCompatActivity {
             updateTeam1();
         } else
             showMaxErrorToast("Points");
+    }
+
+    public void decrementTeam1Points(View v) {
+        if (team1Points > 0) {
+            team1Points--;
+            team1Score--;
+            updateTeam1();
+        } else
+            showMinErrorToast("Points");
     }
 
     public void incrementTeam2Goals(View v) {
@@ -102,10 +120,28 @@ public class MainActivity extends AppCompatActivity {
             showMaxErrorToast("Goals");
     }
 
+    public void decrementTeam2Goals(View v) {
+        if (team2Goals > 0) {
+            team2Goals--;
+            team2Score -= 3;
+            updateTeam2();
+        } else
+            showMaxErrorToast("Goals");
+    }
+
     public void incrementTeam2Points(View v) {
         if (team2Points < 99) {
             team2Points++;
             team2Score++;
+            updateTeam2();
+        } else
+            showMaxErrorToast("Points");
+    }
+
+    public void decrementTeam2Points(View v) {
+        if (team2Points > 0) {
+            team2Points--;
+            team2Score--;
             updateTeam2();
         } else
             showMaxErrorToast("Points");
@@ -131,15 +167,21 @@ public class MainActivity extends AppCompatActivity {
         team2ScoreTextView.setText(String.valueOf(team2Score));
     }
 
-    //Displays toast if max off 99 points/goals is reached
+    //Displays toast if max of 99 points/goals is reached
     public void showMaxErrorToast(String goalsOrPoints) {
         Toast maxToast = Toast.makeText(this, goalsOrPoints + " cannot exceed 99", Toast.LENGTH_SHORT);
         maxToast.show();
     }
 
+    //Displays toast if min of 0 points/goals is reached
+    public void showMinErrorToast(String goalsOrPoints) {
+        Toast maxToast = Toast.makeText(this, goalsOrPoints + " at 0", Toast.LENGTH_SHORT);
+        maxToast.show();
+    }
+
     //Displays toast after team selection giving instructions
     public void showIntroToast() {
-        Toast infoToast = Toast.makeText(this, "Tap a goals or points number to increment it!", Toast.LENGTH_LONG);
+        Toast infoToast = Toast.makeText(this, "Tap a number to increment it!\nHold a number to decrement it!", Toast.LENGTH_LONG);
         infoToast.show();
     }
 
