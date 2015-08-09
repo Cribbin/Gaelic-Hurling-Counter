@@ -105,12 +105,11 @@ public class MainActivity extends AppCompatActivity {
             team2RightColour.setBackgroundColor(teams[position2].getSecondaryColour());
 
             showIntroToast();
+            setUpLongClickListeners();
         } else {
             Toast noSelectionTeoast = Toast.makeText(this, "Must choose two teams before proceeding", Toast.LENGTH_SHORT);
             noSelectionTeoast.show();
         }
-
-        setUpLongClickListeners();
     }
 
     private void setUpLongClickListeners(){
@@ -160,7 +159,7 @@ public class MainActivity extends AppCompatActivity {
             showMaxErrorToast("Goals");
     }
 
-    public void decrementTeam1Goals() {
+    private void decrementTeam1Goals() {
         if (team1Goals > 0) {
             team1Goals--;
             team1Score -= 3;
@@ -178,7 +177,7 @@ public class MainActivity extends AppCompatActivity {
             showMaxErrorToast("Points");
     }
 
-    public void decrementTeam1Points() {
+    private void decrementTeam1Points() {
         if (team1Points > 0) {
             team1Points--;
             team1Score--;
@@ -196,7 +195,7 @@ public class MainActivity extends AppCompatActivity {
             showMaxErrorToast("Goals");
     }
 
-    public void decrementTeam2Goals() {
+    private void decrementTeam2Goals() {
         if (team2Goals > 0) {
             team2Goals--;
             team2Score -= 3;
@@ -214,7 +213,7 @@ public class MainActivity extends AppCompatActivity {
             showMaxErrorToast("Points");
     }
 
-    public void decrementTeam2Points() {
+    private void decrementTeam2Points() {
         if (team2Points > 0) {
             team2Points--;
             team2Score--;
@@ -223,7 +222,7 @@ public class MainActivity extends AppCompatActivity {
             showMinErrorToast("Points");
     }
 
-    public void updateTeam1() {
+    private void updateTeam1() {
         TextView team1GoalsTextView = (TextView) findViewById(R.id.team_1_goals);
         TextView team1PointsTextView = (TextView) findViewById(R.id.team_1_points);
         TextView team1ScoreTextView = (TextView) findViewById(R.id.team_1_score);
@@ -233,7 +232,7 @@ public class MainActivity extends AppCompatActivity {
         team1ScoreTextView.setText(String.valueOf(team1Score));
     }
 
-    public void updateTeam2() {
+    private void updateTeam2() {
         TextView team2GoalsTextView = (TextView) findViewById(R.id.team_2_goals);
         TextView team2PointsTextView = (TextView) findViewById(R.id.team_2_points);
         TextView team2ScoreTextView = (TextView) findViewById(R.id.team_2_score);
@@ -244,24 +243,24 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //Displays toast if max of 99 points/goals is reached
-    public void showMaxErrorToast(String goalsOrPoints) {
+    private void showMaxErrorToast(String goalsOrPoints) {
         Toast maxToast = Toast.makeText(this, goalsOrPoints + " cannot exceed 99", Toast.LENGTH_SHORT);
         maxToast.show();
     }
 
     //Displays toast if min of 0 points/goals is reached
-    public void showMinErrorToast(String goalsOrPoints) {
+    private void showMinErrorToast(String goalsOrPoints) {
         Toast maxToast = Toast.makeText(this, goalsOrPoints + " at 0", Toast.LENGTH_SHORT);
         maxToast.show();
     }
 
     //Displays toast after team selection giving instructions
-    public void showIntroToast() {
+    private void showIntroToast() {
         Toast infoToast = Toast.makeText(this, "Tap a number to increment it!\nHold a number to decrement it!", Toast.LENGTH_LONG);
         infoToast.show();
     }
 
-    public CountyTeam[] createTeams() {
+    private CountyTeam[] createTeams() {
         CountyTeam[] teamArray = new CountyTeam[32];
         int green = 0xff009900;
         int red = 0xffff0000;
