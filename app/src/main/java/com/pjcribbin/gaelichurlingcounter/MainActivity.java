@@ -14,14 +14,14 @@ import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity {
-    int team1Goals = 0, team1Points = 0, team1Score = 0;
-    int team2Goals = 0, team2Points = 0, team2Score = 0;
-    boolean team1Selected = false;
-    boolean team2Selected = false;
+    private int team1Goals = 0, team1Points = 0, team1Score = 0;
+    private int team2Goals = 0, team2Points = 0, team2Score = 0;
+    private boolean team1Selected = false;
+    private boolean team2Selected = false;
     private Menu myMenu = null;
     //County user chooses in team menu
-    int position1;
-    int position2;
+    private int position1;
+    private int position2;
 
     //Displays two option menus for team selection and button to finalize choices
     @Override
@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //Displays the main goals and points screen
-    public void setPointsActivity(CountyTeam[] teams) {
+    private void setPointsActivity(CountyTeam[] teams) {
         if (team1Selected && team2Selected) {
             setContentView(R.layout.activity_main);
 
