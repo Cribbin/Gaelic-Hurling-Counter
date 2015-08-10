@@ -2,6 +2,8 @@ package com.pjcribbin.gaelichurlingcounter;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -106,6 +108,7 @@ public class MainActivity extends AppCompatActivity {
 
             showIntroToast();
             setUpLongClickListeners();
+
         } else {
             Toast noSelectionTeoast = Toast.makeText(this, "Must choose two teams before proceeding", Toast.LENGTH_SHORT);
             noSelectionTeoast.show();
@@ -148,6 +151,35 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch(item.getItemId()){
+            case R.id.menu_reset:
+                team1Goals = 0;
+                team1Points = 0;
+                team1Score = 0;
+                team2Goals = 0;
+                team2Points = 0;
+                team2Score = 0;
+
+                updateTeam1();
+                updateTeam2();
+
+                Toast scoreResetToast = Toast.makeText(this, "Scores reset", Toast.LENGTH_SHORT);
+                scoreResetToast.show();
+                return true;
+
+            default:
+                return true;
+        }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
     }
 
     public void incrementTeam1Goals(View v) {
