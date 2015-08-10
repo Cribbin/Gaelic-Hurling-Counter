@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     int team2Goals = 0, team2Points = 0, team2Score = 0;
     boolean team1Selected = false;
     boolean team2Selected = false;
+    private Menu myMenu = null;
     //County user chooses in team menu
     int position1;
     int position2;
@@ -106,6 +107,8 @@ public class MainActivity extends AppCompatActivity {
             View team2RightColour = findViewById(R.id.right_colour_team_2);
             team2RightColour.setBackgroundColor(teams[position2].getSecondaryColour());
 
+            Menu menu = getMenu();
+            getMenuInflater().inflate(R.menu.menu_main, menu);
             showIntroToast();
             setUpLongClickListeners();
 
@@ -178,8 +181,12 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        myMenu = menu;
         return true;
+    }
+
+    private Menu getMenu(){
+        return myMenu;
     }
 
     public void incrementTeam1Goals(View v) {
