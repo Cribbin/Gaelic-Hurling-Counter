@@ -118,7 +118,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void setUpLongClickListeners(){
+    private void setUpLongClickListeners() {
         TextView team1GoalsTV = (TextView) findViewById(R.id.team_1_goals);
         team1GoalsTV.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
@@ -158,7 +158,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch(item.getItemId()){
+        switch (item.getItemId()) {
             case R.id.menu_reset:
                 team1Goals = 0;
                 team1Points = 0;
@@ -180,12 +180,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu){
+    public boolean onCreateOptionsMenu(Menu menu) {
         myMenu = menu;
         return true;
     }
 
-    private Menu getMenu(){
+    private Menu getMenu() {
         return myMenu;
     }
 
