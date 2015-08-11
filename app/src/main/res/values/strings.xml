@@ -10,4 +10,7 @@
     <string name="team_2_default_name">Team 2</string>
     <string name="team_2_default_name_irish">Foirne 2</string>
     <string name="reset_scores">Reset Scores</string>
+    <string name="team_1_colon">Team 1:</string>
+    <string name="team_2_colon">Team 2:</string>
+    <string name="choose_teams">Choose Teams</string>
 </resources>
