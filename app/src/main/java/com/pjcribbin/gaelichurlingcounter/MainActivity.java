@@ -1,5 +1,6 @@
 package com.pjcribbin.gaelichurlingcounter;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
@@ -81,7 +82,11 @@ public class MainActivity extends AppCompatActivity {
     //Displays the main goals and points screen
     private void setPointsActivity(CountyTeam[] teams) {
         if (team1Selected && team2Selected) {
-            setContentView(R.layout.activity_main);
+            Intent intent = new Intent(this, ScoreActivity.class);
+            startActivity(intent);
+
+
+           /* setContentView(R.layout.activity_main);
 
             TextView team1EnglishName = (TextView) findViewById(R.id.team_1_english_name);
             team1EnglishName.setText(teams[position1].getEnglishName());
@@ -110,7 +115,8 @@ public class MainActivity extends AppCompatActivity {
             Menu menu = getMenu();
             getMenuInflater().inflate(R.menu.menu_main, menu);
             showIntroToast();
-            setUpLongClickListeners();
+            setUpLongClickListeners();*/
+
 
         } else {
             Toast noSelectionTeoast = Toast.makeText(this, "Must choose two teams before proceeding", Toast.LENGTH_SHORT);
