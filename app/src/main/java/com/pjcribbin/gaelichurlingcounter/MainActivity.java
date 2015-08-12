@@ -14,10 +14,9 @@ import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity {
-    public final static String EXTRA_MESSAGE = "com.mycompany.myfirstapp.POSITION1";
     private boolean team1Selected = false;
     private boolean team2Selected = false;
-    //private Menu myMenu = null;
+
     //County user chooses in team menu
     private int position1;
     private int position2;
@@ -81,26 +80,16 @@ public class MainActivity extends AppCompatActivity {
     private void setPointsActivity(CountyTeam[] teams) {
         if (team1Selected && team2Selected) {
 
-            String team1EnglishName = teams[position1].getEnglishName();
-            String team1IrishName = teams[position1].getIrishName();
-            int team1PrimaryColour = teams[position1].getPrimaryColour();
-            int team1SecondaryColour = teams[position1].getSecondaryColour();
-
-            String team2EnglishName = teams[position2].getEnglishName();
-            String team2IrishName = teams[position2].getIrishName();
-            int team2PrimaryColour = teams[position2].getPrimaryColour();
-            int team2SecondaryColour = teams[position2].getSecondaryColour();
-
             Intent intent = new Intent(this, ScoreActivity.class);
-            intent.putExtra("t1English", team1EnglishName);
-            intent.putExtra("t1Irish", team1IrishName);
-            intent.putExtra("t1Primary", team1PrimaryColour);
-            intent.putExtra("t1Secondary", team1SecondaryColour);
+            intent.putExtra("t1English", teams[position1].getEnglishName());
+            intent.putExtra("t1Irish", teams[position1].getIrishName());
+            intent.putExtra("t1Primary", teams[position1].getPrimaryColour());
+            intent.putExtra("t1Secondary", teams[position1].getSecondaryColour());
 
-            intent.putExtra("t2English", team2EnglishName);
-            intent.putExtra("t2Irish", team2IrishName);
-            intent.putExtra("t2Primary", team2PrimaryColour);
-            intent.putExtra("t2Secondary", team2SecondaryColour);
+            intent.putExtra("t2English", teams[position2].getEnglishName());
+            intent.putExtra("t2Irish", teams[position2].getIrishName());
+            intent.putExtra("t2Primary", teams[position2].getPrimaryColour());
+            intent.putExtra("t2Secondary", teams[position2].getSecondaryColour());
 
             startActivity(intent);
 
@@ -112,13 +101,8 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        //myMenu = menu;
         return true;
     }
-
-    /*private Menu getMenu() {
-        return myMenu;
-    }*/
 
     private CountyTeam[] createTeams() {
         CountyTeam[] teamArray = new CountyTeam[32];
