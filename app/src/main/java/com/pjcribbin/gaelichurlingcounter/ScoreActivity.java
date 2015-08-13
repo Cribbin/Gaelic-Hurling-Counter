@@ -3,6 +3,7 @@ package com.pjcribbin.gaelichurlingcounter;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -88,14 +89,16 @@ public class ScoreActivity extends AppCompatActivity implements Serializable {
 
                 Toast scoreResetToast = Toast.makeText(this, "Scores reset", Toast.LENGTH_SHORT);
                 scoreResetToast.show();
-                return true;
+                break;
 
             case android.R.id.home:
-                return true;
+                NavUtils.navigateUpFromSameTask(this);
+                break;
 
             default:
-                return true;
+                break;
         }
+        return true;
     }
 
     private void setUpLongClickListeners() {
