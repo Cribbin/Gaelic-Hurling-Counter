@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         setMenus();
     }
 
-    public void setMenus() {
+    private void setMenus() {
         final CountyTeam[] teams = createTeams();
         ListAdapter teamListAdapter = new TeamListAdapter(this, teams);
 
@@ -86,6 +86,19 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
         );
+
+        // Carries over team selection on orientation change
+        if (team1Selected) {
+            TextView selectedTeam = (TextView) findViewById(R.id.team_1_choice);
+            String selection = teams[position1].getEnglishName();
+            selectedTeam.setText(selection);
+        }
+
+        if (team2Selected) {
+            TextView selectedTeam = (TextView) findViewById(R.id.team_2_choice);
+            String selection = teams[position2].getEnglishName();
+            selectedTeam.setText(selection);
+        }
     }
 
     //Displays the main goals and points screen
