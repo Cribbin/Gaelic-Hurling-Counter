@@ -1,6 +1,7 @@
 package com.pjcribbin.gaelichurlingcounter;
 
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
@@ -18,6 +19,24 @@ public class ScoreActivity extends AppCompatActivity implements Serializable {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        setTeamNamesAndColours();
+        showIntroToast();
+        setUpLongClickListeners();
+    }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        setContentView(R.layout.score_screen);
+
+        setTeamNamesAndColours();
+        setUpLongClickListeners();
+        updateTeam1();
+        updateTeam2();
+    }
+
+    public void setTeamNamesAndColours() {
         Intent intent = getIntent();
 
         setContentView(R.layout.score_screen);
@@ -45,9 +64,6 @@ public class ScoreActivity extends AppCompatActivity implements Serializable {
 
         View team2RightColour = findViewById(R.id.right_colour_team_2);
         team2RightColour.setBackgroundColor(intent.getIntExtra("t2Secondary", 0));
-
-        showIntroToast();
-        setUpLongClickListeners();
     }
 
     @Override
@@ -72,6 +88,9 @@ public class ScoreActivity extends AppCompatActivity implements Serializable {
 
                 Toast scoreResetToast = Toast.makeText(this, "Scores reset", Toast.LENGTH_SHORT);
                 scoreResetToast.show();
+                return true;
+
+            case android.R.id.home:
                 return true;
 
             default:
