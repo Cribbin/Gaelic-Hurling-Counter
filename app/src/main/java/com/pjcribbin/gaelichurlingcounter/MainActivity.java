@@ -1,6 +1,7 @@
 package com.pjcribbin.gaelichurlingcounter;
 
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
@@ -24,11 +25,22 @@ public class MainActivity extends AppCompatActivity {
     //Displays two option menus for team selection and button to finalize choices
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        final CountyTeam[] teams = createTeams();
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.team_menu);
 
+        setMenus();
+    }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        setContentView(R.layout.team_menu);
+
+        setMenus();
+    }
+
+    public void setMenus() {
+        final CountyTeam[] teams = createTeams();
         ListAdapter teamListAdapter = new TeamListAdapter(this, teams);
 
         //Team 1 menu
