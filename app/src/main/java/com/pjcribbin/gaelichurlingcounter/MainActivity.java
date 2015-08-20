@@ -148,7 +148,7 @@ public class MainActivity extends AppCompatActivity {
         teamArray[0] = antrim;
         CountyTeam armagh = new CountyTeam("Armagh", "Ard Mhacha", "ARM", orange, white);
         teamArray[1] = armagh;
-        CountyTeam carlow = new CountyTeam("Carlow", "Ceatharlach", "CAR", red, green);
+        CountyTeam carlow = new CountyTeam("Carlow", "Ceatharlach", "CAR", red, yellow, green);
         teamArray[2] = carlow;
         CountyTeam cavan = new CountyTeam("Cavan", "An Cabhán", "CAV", blue, white);
         teamArray[3] = cavan;
