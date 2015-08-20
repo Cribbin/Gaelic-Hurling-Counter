@@ -44,4 +44,8 @@ public class CountyTeam {
     public int getSecondaryColour() {
         return secondaryColour;
     }
+
+    public int getTertiaryColour() {
+        return tertiaryColour;
+    }
 }
