@@ -38,39 +38,27 @@
 
                 <View
                     android:id="@+id/colour_1_team_1"
-                    android:layout_width="0dp"
-                    android:layout_height="4dp"
-                    android:layout_weight="1" />
+                    style="@style/teamColours" />
 
                 <View
                     android:id="@+id/colour_2_team_1"
-                    android:layout_width="0dp"
-                    android:layout_height="4dp"
-                    android:layout_weight="1" />
+                    style="@style/teamColours" />
 
                 <View
                     android:id="@+id/colour_3_team_1"
-                    android:layout_width="0dp"
-                    android:layout_height="4dp"
-                    android:layout_weight="1" />
+                    style="@style/teamColours" />
 
                 <View
                     android:id="@+id/colour_4_team_1"
-                    android:layout_width="0dp"
-                    android:layout_height="4dp"
-                    android:layout_weight="1" />
+                    style="@style/teamColours" />
 
                 <View
                     android:id="@+id/colour_5_team_1"
-                    android:layout_width="0dp"
-                    android:layout_height="4dp"
-                    android:layout_weight="1" />
+                    style="@style/teamColours" />
 
                 <View
                     android:id="@+id/colour_6_team_1"
-                    android:layout_width="0dp"
-                    android:layout_height="4dp"
-                    android:layout_weight="1" />
+                    style="@style/teamColours" />
 
             </LinearLayout>
 
@@ -140,39 +128,27 @@
 
                 <View
                     android:id="@+id/colour_1_team_2"
-                    android:layout_width="0dp"
-                    android:layout_height="4dp"
-                    android:layout_weight="1" />
+                    style="@style/teamColours" />
 
                 <View
                     android:id="@+id/colour_2_team_2"
-                    android:layout_width="0dp"
-                    android:layout_height="4dp"
-                    android:layout_weight="1" />
+                    style="@style/teamColours" />
 
                 <View
                     android:id="@+id/colour_3_team_2"
-                    android:layout_width="0dp"
-                    android:layout_height="4dp"
-                    android:layout_weight="1" />
+                    style="@style/teamColours" />
 
                 <View
                     android:id="@+id/colour_4_team_2"
-                    android:layout_width="0dp"
-                    android:layout_height="4dp"
-                    android:layout_weight="1" />
+                    style="@style/teamColours" />
 
                 <View
                     android:id="@+id/colour_5_team_2"
-                    android:layout_width="0dp"
-                    android:layout_height="4dp"
-                    android:layout_weight="1" />
+                    style="@style/teamColours" />
 
                 <View
                     android:id="@+id/colour_6_team_2"
-                    android:layout_width="0dp"
-                    android:layout_height="4dp"
-                    android:layout_weight="1" />
+                    style="@style/teamColours" />
 
             </LinearLayout>
 

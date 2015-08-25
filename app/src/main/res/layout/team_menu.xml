@@ -48,5 +48,5 @@
 
     <Button
         android:id="@+id/choose_teams_button"
-        style="@style/chooseTeamsButton"/>
+        style="@style/chooseTeamsButton" />
 </LinearLayout>
