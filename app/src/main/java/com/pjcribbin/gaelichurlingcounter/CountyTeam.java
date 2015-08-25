@@ -46,6 +46,8 @@ public class CountyTeam {
     }
 
     public int getTertiaryColour() {
-        return tertiaryColour;
+        if (tertiaryColour != 0) {
+            return tertiaryColour;
+        } return 0x00000000;
     }
 }
