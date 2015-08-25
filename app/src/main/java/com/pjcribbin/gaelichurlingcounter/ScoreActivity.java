@@ -54,17 +54,72 @@ public class ScoreActivity extends AppCompatActivity implements Serializable {
         TextView team2IrishName = (TextView) findViewById(R.id.team_2_irish_name);
         team2IrishName.setText(intent.getStringExtra("t2Irish"));
 
-        View team1LeftColour = findViewById(R.id.left_colour_team_1);
-        team1LeftColour.setBackgroundColor(intent.getIntExtra("t1Primary", 0));
+        View team1Colour1 = findViewById(R.id.colour_1_team_1);
+        team1Colour1.setBackgroundColor(intent.getIntExtra("t1Primary", 0));
 
-        View team1RightColour = findViewById(R.id.right_colour_team_1);
-        team1RightColour.setBackgroundColor(intent.getIntExtra("t1Secondary", 0));
+        View team1Colour2 = findViewById(R.id.colour_2_team_1);
+        team1Colour2.setBackgroundColor(intent.getIntExtra("t1Primary", 0));
 
-        View team2LeftColour = findViewById(R.id.left_colour_team_2);
-        team2LeftColour.setBackgroundColor(intent.getIntExtra("t2Primary", 0));
+        View team1Colour4 = findViewById(R.id.colour_4_team_1);
+        team1Colour4.setBackgroundColor(intent.getIntExtra("t1Secondary", 0));
 
-        View team2RightColour = findViewById(R.id.right_colour_team_2);
-        team2RightColour.setBackgroundColor(intent.getIntExtra("t2Secondary", 0));
+        // If team has two colours
+        if (intent.getIntExtra("t1Tertiary", 0) == 0x00000000) {
+            View team1Colour3 = findViewById(R.id.colour_3_team_1);
+            team1Colour3.setBackgroundColor(intent.getIntExtra("t1Primary", 0));
+
+            View team1Colour5 = findViewById(R.id.colour_5_team_1);
+            team1Colour5.setBackgroundColor(intent.getIntExtra("t1Secondary", 0));
+
+            View team1Colour6 = findViewById(R.id.colour_6_team_1);
+            team1Colour6.setBackgroundColor(intent.getIntExtra("t1Secondary", 0));
+        }
+
+        // If team has three colours
+        else {
+            View team1Colour3 = findViewById(R.id.colour_3_team_1);
+            team1Colour3.setBackgroundColor(intent.getIntExtra("t1Secondary", 0));
+
+            View team1Colour5 = findViewById(R.id.colour_5_team_1);
+            team1Colour5.setBackgroundColor(intent.getIntExtra("t1Tertiary", 0));
+
+            View team1Colour6 = findViewById(R.id.colour_6_team_1);
+            team1Colour6.setBackgroundColor(intent.getIntExtra("t1Tertiary", 0));
+        }
+
+        View team2Colour1 = findViewById(R.id.colour_1_team_2);
+        team2Colour1.setBackgroundColor(intent.getIntExtra("t2Primary", 0));
+
+        View team2Colour2 = findViewById(R.id.colour_2_team_2);
+        team2Colour2.setBackgroundColor(intent.getIntExtra("t2Primary", 0));
+
+        View team2Colour4 = findViewById(R.id.colour_4_team_2);
+        team2Colour4.setBackgroundColor(intent.getIntExtra("t2Secondary", 0));
+
+        // If team has two colours
+        if (intent.getIntExtra("t2Tertiary", 0) == 0x00000000) {
+            View team2Colour3 = findViewById(R.id.colour_3_team_2);
+            team2Colour3.setBackgroundColor(intent.getIntExtra("t2Primary", 0));
+
+            View team2Colour5 = findViewById(R.id.colour_5_team_2);
+            team2Colour5.setBackgroundColor(intent.getIntExtra("t2Secondary", 0));
+
+            View team2Colour6 = findViewById(R.id.colour_6_team_2);
+            team2Colour6.setBackgroundColor(intent.getIntExtra("t2Secondary", 0));
+        }
+
+        // If team has three colours
+        else {
+            View team2Colour3 = findViewById(R.id.colour_3_team_2);
+            team2Colour3.setBackgroundColor(intent.getIntExtra("t2Secondary", 0));
+
+            View team2Colour5 = findViewById(R.id.colour_5_team_2);
+            team2Colour5.setBackgroundColor(intent.getIntExtra("t2Tertiary", 0));
+
+            View team2Colour6 = findViewById(R.id.colour_6_team_2);
+            team2Colour6.setBackgroundColor(intent.getIntExtra("t2Tertiary", 0));
+        }
+
     }
 
     @Override

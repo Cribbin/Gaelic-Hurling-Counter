@@ -110,11 +110,13 @@ public class MainActivity extends AppCompatActivity {
             intent.putExtra("t1Irish", teams[position1].getIrishName());
             intent.putExtra("t1Primary", teams[position1].getPrimaryColour());
             intent.putExtra("t1Secondary", teams[position1].getSecondaryColour());
+            intent.putExtra("t1Tertiary", teams[position1].getTertiaryColour());
 
             intent.putExtra("t2English", teams[position2].getEnglishName());
             intent.putExtra("t2Irish", teams[position2].getIrishName());
             intent.putExtra("t2Primary", teams[position2].getPrimaryColour());
             intent.putExtra("t2Secondary", teams[position2].getSecondaryColour());
+            intent.putExtra("t2Tertiary", teams[position2].getTertiaryColour());
 
             startActivity(intent);
 
