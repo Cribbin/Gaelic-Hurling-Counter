@@ -12,19 +12,46 @@
         android:orientation="vertical">
 
         <View
-            android:id="@+id/primary_colour"
+            android:id="@+id/menu_colour_1"
             android:layout_width="8dp"
             android:layout_height="0dp"
             android:layout_weight="1"
             android:background="#000000" />
 
         <View
-            android:id="@+id/secondary_colour"
+            android:id="@+id/menu_colour_2"
+            android:layout_width="8dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#000000" />
+
+        <View
+            android:id="@+id/menu_colour_3"
             android:layout_width="8dp"
             android:layout_height="0dp"
             android:layout_weight="1"
             android:background="#ffffff" />
 
+        <View
+            android:id="@+id/menu_colour_4"
+            android:layout_width="8dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#ffffff" />
+
+        <View
+            android:id="@+id/menu_colour_5"
+            android:layout_width="8dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#000000" />
+
+        <View
+            android:id="@+id/menu_colour_6"
+            android:layout_width="8dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#000000" />
 
     </LinearLayout>
 

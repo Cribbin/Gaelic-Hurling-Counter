@@ -25,16 +25,36 @@ public class TeamListAdapter extends ArrayAdapter<CountyTeam> {
         TextView irishNameTextView = (TextView) customView.findViewById(R.id.irish_name);
 
         int primaryColour = (getItem(position)).getPrimaryColour();
-        View colourLeft = customView.findViewById(R.id.primary_colour);
+        View colourPrimary1 = customView.findViewById(R.id.menu_colour_1);
+        View colourPrimary2 = customView.findViewById(R.id.menu_colour_2);
 
         int secondaryColour = (getItem(position)).getSecondaryColour();
-        View colourRight = customView.findViewById(R.id.secondary_colour);
+        View colourSecondary1 = customView.findViewById(R.id.menu_colour_3);
+        View colourSecondary2 = customView.findViewById(R.id.menu_colour_4);
+
+        int tertiaryColour = (getItem(position)).getTertiaryColour();
+        View colourTertiary1 = customView.findViewById(R.id.menu_colour_5);
+        View colourTertiary2 = customView.findViewById(R.id.menu_colour_6);
 
         englishNameTextView.setText(individualEnglishName);
         irishNameTextView.setText(individualIrishName);
-        colourLeft.setBackgroundColor(primaryColour);
-        colourRight.setBackgroundColor(secondaryColour);
+        colourPrimary1.setBackgroundColor(primaryColour);
+        colourPrimary2.setBackgroundColor(primaryColour);
+        colourSecondary2.setBackgroundColor(secondaryColour);
+
+        // If county has two colours
+        if (tertiaryColour == 0x00000000) {
+            colourSecondary1.setBackgroundColor(primaryColour);
+            colourTertiary1.setBackgroundColor(secondaryColour);
+            colourTertiary2.setBackgroundColor(secondaryColour);
+        }
+
+        // If county has three colours
+        else {
+            colourSecondary1.setBackgroundColor(secondaryColour);
+            colourTertiary1.setBackgroundColor(tertiaryColour);
+            colourTertiary2.setBackgroundColor(tertiaryColour);
+        }
         return customView;
     }
-
 }
