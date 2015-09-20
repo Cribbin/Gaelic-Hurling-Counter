@@ -145,6 +145,7 @@ public class MainActivity extends AppCompatActivity {
         int maroon = 0xff990000;
         int amber = 0xffffd700;
         int purple = 0xff660099;
+        int gold = 0xfffecd06;
 
         CountyTeam antrim = new CountyTeam("Antrim", "Aontroim", "ANT", yellow, white);
         teamArray[0] = antrim;
@@ -192,7 +193,7 @@ public class MainActivity extends AppCompatActivity {
         teamArray[21] = meath;
         CountyTeam monaghan = new CountyTeam("Monaghan", "Muineachán", "MON", white, blue);
         teamArray[22] = monaghan;
-        CountyTeam offaly = new CountyTeam("Offaly", "Uíbh Fhailí", "OFF", green, yellow);
+        CountyTeam offaly = new CountyTeam("Offaly", "Uíbh Fhailí", "OFF", green, white, gold);
         teamArray[23] = offaly;
         CountyTeam roscommon = new CountyTeam("Roscommon", "Ros Comáin", "ROS", green, yellow);
         teamArray[24] = roscommon;
